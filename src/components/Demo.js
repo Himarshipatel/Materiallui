@@ -1,40 +1,38 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
-const useStyles = makeStyles(theme => ({
+import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import Avatar from '@material-ui/core/Avatar';
+import Image from "./components/Image.js";
+const styles = theme => ({
   root: {
-    flexGrow: 1,
+    color:"lightblue",
+    
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
+  large: {
+    width: theme.spacing(17),
+    height: theme.spacing(17),
   },
-  title: {
-    flexGrow: 1,
-  },
-}));
+});
 
-export default function ButtonAppBar() {
-  const classes = useStyles();
+class TitlebarGridList extends Component {
 
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+
+
+
+  render() {
+    const { classes } = this.props;
+    return (
+      <div>
+      <div className={classes.root}>
+     <h1>hi</h1>
+     <Avatar className={classes.large} src="https://media.istockphoto.com/photos/smiling-businesswoman-looking-at-camera-webcam-make-conference-call-picture-id1129638608" />
+      
+       </div>
+       <div>
+       <image src="https://image.shutterstock.com/z/stock-photo-mountains-during-sunset-beautiful-natural-landscape-in-the-summer-time-407021107.jpg"/> 
+       </div>
+       </div>
+    );
+  }
 }
+export default withStyles(styles)(TitlebarGridList);
