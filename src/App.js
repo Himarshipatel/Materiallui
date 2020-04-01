@@ -5,7 +5,6 @@ import Typographyy from "./components/Typographyy.js";
 import Cardd from "./components/Card.js";
 import Card1 from "./components/Card1.js";
 import Card2 from "./components/Card2.js";
-
 import "./App.css";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -22,15 +21,17 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import Avatar from '@material-ui/core/Avatar';
 import CardMedia from '@material-ui/core/CardMedia';
 import Icon from "@material-ui/core/Icon";
-//import Typographyy from './components/Typographyy.js';
-const styles = theme => ({
-  
+import Component1 from './components/Component1.js';
+import Component2 from './components/Component2.js';
+import Component3 from './components/Component3.js';
+
+const styles = theme => ({ 
   large: {
     width: theme.spacing(20),
     height: theme.spacing(20),
-  },
- 
+  }, 
 });
+
 class App extends Component {
   render() {
     const { classes } = this.props;
@@ -75,7 +76,7 @@ class App extends Component {
           bgcolor="green"
           display="inline"
           p={35}
-          width={1263}
+          width={1239}
           display="inline-block"
         >
           <Box ml={60} mt={-10} fontSize={42} fontWeight="bold" color="#ede7f6">Primo Material</Box><br/>
@@ -91,61 +92,30 @@ class App extends Component {
           </div>
         </Box>
         
+{/* -----Component1 Start----- */}
 <div>
 <Box display="flex" alignItems="flex-start"   >
-
-<Box p={2} fontSize={38}> Easy Code
-<Box fontSize={15} mt={2}>Pellentesque habitant morbi tristique senectus et netus et </Box>
-<Box fontSize={15}>Pellentesque habitant morbi tristique senectus et netus et </Box>
-<Box fontSize={15}>Pellentesque habitant morbi tristique senectus et netus et </Box>
-
-<Box mt={5} >
-  <Button variant="contained" color="primary">Source Code</Button>
- </Box>
-
-</Box>
-
- 
-
+<Component1 />
 <Box ml={80.5} >
  <Image />
 </Box>
-
 </Box>
 </div>
 
 <div>
 <Box display="flex" alignItems="flex-start"   >
-
-
-<Box mt={-3.1} >
- <Image />
+<Box mt={-3.2}>
+<Image />
 </Box>
-
-<Box p={0} fontSize={38} ml={3}> Easy Code
-<Box fontSize={15} mt={2}>Pellentesque habitant morbi tristique senectus et netus et </Box>
-<Box fontSize={15}>Pellentesque habitant morbi tristique senectus et netus et </Box>
-<Box fontSize={15}>Pellentesque habitant morbi tristique senectus et netus et </Box>
-
-<Box mt={5} >
-  <Button variant="contained" color="primary">Source Code</Button>
- </Box>
-
+<Box p={0} fontSize={38} ml={3}>
+ <Component1 />
 </Box>
-
- 
-
-
-
 </Box>
 </div>
-
-
-
+{/* -----Component1 End----- */}
         <Box fontSize={38} ml={100} fontWeight="bold" mb={7}>
           Services
         </Box>
-
         <Box ml={25} p={3}  display="inline" fontSize={30}>
           Speeds up Devlopment
         </Box>
@@ -156,22 +126,17 @@ class App extends Component {
           Easy to work with
         </Box>
         <Box ml={33}>
-        
               <br />
               <Typography color="textSecondary" gutterBottom>
                 speedy devlopment
               </Typography>
-
               <Typography color="textSecondary">fast devlopment</Typography>
               <Typography variant="body2" component="p">
                 well design and maintain code
                 <br />
               </Typography>
-            
         </Box>
-
         <Box ml={107} mt={-12}>
-          
               <br />
               <Typography color="textSecondary" gutterBottom>
                 user freindly
@@ -182,13 +147,10 @@ class App extends Component {
                 well designed
                 <br />
               </Typography>
-          
-           
         </Box>
 
         <Box ml={178} mt={-12}>
-          
-              <br />
+           <br />
               <Typography color="textSecondary" gutterBottom>
                 user freindly
               </Typography>
@@ -198,7 +160,6 @@ class App extends Component {
                 well designed
                 <br />
               </Typography>
-           
         </Box>
         <br />
         <br />
@@ -206,21 +167,8 @@ class App extends Component {
         <Box ml={100} fontWeight="bold" fontSize={38}>Portfolio</Box><br/>
 
 <Box ml={10 }>
-          <Typography gutterBottom variant="h5" component="h2">
-            pixaaaaaa
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            pixaa are a widespread group of squamate reptiles, 
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            with over 6,000 species, ranging
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-           
-            across all continents except Antarctica
-          </Typography><br/>
+          <Component2 />
+          <br/>
           <Box><Typographyy /></Box>
           <Typography variant="h5" color="textSecondary" component="p">
             
@@ -234,22 +182,8 @@ class App extends Component {
         </Button>
      </Box>
     <Box  ml={100} mt={-42} >
-    
-          <Typography gutterBottom variant="h5" component="h2">
-            pixaa
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            pixaa are a widespread group of squamate reptiles, 
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            with over 6,000 species, ranging
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-
-            across all continents except Antarctica
-          </Typography> <br/>
+          <Component2 />
+         <br/>
           <Box><Cardd /></Box>
           <Typography variant="h5" color="textSecondary" component="p">
 
@@ -264,57 +198,25 @@ class App extends Component {
      
     </Box>
     <Box  ml={170} mt={-42} >
-    
-          <Typography gutterBottom variant="h5" component="h2">
-            pixaa
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            pixaa are a widespread group of squamate reptiles, 
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            with over 6,000 species, ranging
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-           
-            across all continents except Antarctica
-          </Typography><br/>
+          <Component2 />
+          <br/>
           <Box><Typographyy /></Box>
           <Typography variant="h5" color="textSecondary" component="p">
-          
            card Title
          </Typography>
-      
         <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
-     
     </Box>
-    
    <br/><br/>
 <Box ml={10 }>
-          <Typography gutterBottom variant="h5" component="h2">
-            pixaa
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            pixaa are a widespread group of squamate reptiles, 
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            with over 6,000 species, ranging
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-           
-            across all continents except Antarctica
-          </Typography><br/>
+          <Component2 />
+          <br/>
           <Box><Card1 /></Box>
           <Typography variant="h5" color="textSecondary" component="p">
-       
            card Title
          </Typography>
         <Button size="small" color="primary">
@@ -325,25 +227,10 @@ class App extends Component {
         </Button>
      </Box>
     <Box  ml={100} mt={-42} >
-    
-          <Typography gutterBottom variant="h5" component="h2">
-            pixaa
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            pixaa are a widespread group of squamate reptiles, 
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            with over 6,000 species, ranging
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-
-            across all continents except Antarctica
-          </Typography> <br/>
+      <Component2 />
+    <br/>
           <Box><Card2 /></Box>
           <Typography variant="h5" color="textSecondary" component="p">
-
            card Title
          </Typography>
         <Button size="small" color="primary">
@@ -352,31 +239,14 @@ class App extends Component {
         <Button size="small" color="primary">
           Learn More
         </Button>
-     
     </Box>
     <Box  ml={170} mt={-42} >
-    
-          <Typography gutterBottom variant="h5" component="h2">
-            pixaa
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            pixaa are a widespread group of squamate reptiles, 
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            with over 6,000 species, ranging
-            
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-           
-            across all continents except Antarctica
-          </Typography><br/>
+      <Component2 />
+    <br/>
           <Box><Card1 /></Box>
           <Typography variant="h5" color="textSecondary" component="p">
-          
            card Title
          </Typography>
-      
         <Button size="small" color="primary">
           Share
         </Button>
@@ -399,44 +269,14 @@ class App extends Component {
      </Box>
      <Box fontSize={38} ml={130} color="#4caf50"  >John Doe</Box>
       <Box fontSize={28} ml={130} color="#4caf50" borderBottom={1} width={550}>Web Devloper</Box>
-
       <Box ml={50} mt={2}>
-      <Typography variant="body2">
-                Pellentesque habitant morbi tristique senectus et netus et 
-              </Typography>
-
-              <Typography variant="body2">
-                turpis egestats vestubulam tortor quam,feuglat vitae,ultriglase eget,tempor sit
-              </Typography>
-              <Typography variant="body2" component="p">
-                amet,anteDonec eue libero sit ament quamegeastas semper aniel altrisias mivitaeeast
-                <br />
-              </Typography>
-              <Typography variant="body2" component="p">
-               mauris phraser eat elistars lio
-                <br />
-              </Typography>
+      <Component3 />
       </Box>
       <Box ml={130} mt={2} mt={-10}>
-      <Typography variant="body2">
-                Pellentesque habitant morbi tristique senectus et netus et 
-              </Typography>
-
-              <Typography variant="body2">
-                turpis egestats vestubulam tortor quam,feuglat vitae,ultriglase eget,tempor sit
-              </Typography>
-              <Typography variant="body2" component="p">
-                amet,anteDonec eue libero sit ament quamegeastas semper aniel altrisias mivitaeeast
-                <br />
-              </Typography>
-              <Typography variant="body2" component="p">
-               mauris phraser eat elistars lio
-                <br />
-              </Typography>
-      </Box>
+     <Component3 />
+     </Box>
     </div>
 <br/><br/>
-
     <div>
      <Box ml={70} mb={3}> 
      <Avatar alt="Remy Sharp" className={classes.large} src="https://media.istockphoto.com/photos/happy-old-mature-online-teacher-tutor-looking-at-camera-picture-id1164377489"  />
@@ -451,40 +291,11 @@ class App extends Component {
       <Box fontSize={28} ml={130} color="#4caf50" borderBottom={1} width={550}>Web Designer</Box>
 
       <Box ml={50} mt={2}>
-      <Typography variant="body2">
-                Pellentesque habitant morbi tristique senectus et netus et 
-              </Typography>
-
-              <Typography variant="body2">
-                turpis egestats vestubulam tortor quam,feuglat vitae,ultriglase eget,tempor sit
-              </Typography>
-              <Typography variant="body2" component="p">
-                amet,anteDonec eue libero sit ament quamegeastas semper aniel altrisias mivitaeeast
-                <br />
-              </Typography>
-              <Typography variant="body2" component="p">
-               mauris phraser eat elistars lio
-                <br />
-              </Typography>
+      <Component3 />
       </Box>
       <Box ml={130} mt={2} mt={-10}>
-      <Typography variant="body2">
-                Pellentesque habitant morbi tristique senectus et netus et 
-              </Typography>
-
-              <Typography variant="body2">
-                turpis egestats vestubulam tortor quam,feuglat vitae,ultriglase eget,tempor sit
-              </Typography>
-              <Typography variant="body2" component="p">
-                amet,anteDonec eue libero sit ament quamegeastas semper aniel altrisias mivitaeeast
-                <br />
-              </Typography>
-              <Typography variant="body2" component="p">
-               mauris phraser eat elistars lio
-                <br />
-              </Typography>
+      <Component3 />
       </Box>
-      
     </div>
     </Box>
 <br/>
